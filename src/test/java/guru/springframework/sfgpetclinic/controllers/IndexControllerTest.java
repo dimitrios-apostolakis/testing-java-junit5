@@ -1,6 +1,7 @@
 package guru.springframework.sfgpetclinic.controllers;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,6 +22,7 @@ class IndexControllerTest {
         assertEquals("index", controller.index(), () -> "Another expensive message");
     }
 
+    @DisplayName("Test exception")
     @Test
     void oupsHandler() {
         assertTrue("notimplemented".equals(controller.oupsHandler()), () -> "This is an expensive message" +
