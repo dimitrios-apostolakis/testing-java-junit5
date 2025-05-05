@@ -1,6 +1,7 @@
 package guru.springframework.sfgpetclinic.model;
 
 import guru.springframework.sfgpetclinic.ModelTests;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -29,7 +30,8 @@ class OwnerTest implements ModelTests {
         assertThat(owner.getCity(), is("Key West"));
     }
 
-    @ParameterizedTest
+    @DisplayName( "Test Value Source - ")
+    @ParameterizedTest(name = "{displayName} - [{index}] {arguments}")
     @ValueSource(strings = {"spring", "framework", "guru"})
     void testValueSource(String value) {
         System.out.println(value);
